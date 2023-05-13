@@ -33,11 +33,11 @@ const setAlarm = () => {
 
     const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
 
-    const oddNumberCount = () => {
+    const oddNumberCount = (x) => {
         for (let i = 0; i < numbers.length; i++){
             if(numbers[i] % 2 !== 0) {
-                // console.log(numbers[i]);
-                console.log(numbers.filter(oddNumberCount))
+                console.log(numbers[i]);
+                // console.log(numbers.filter(oddNumberCount([])))
             }
         }
         };
@@ -51,6 +51,20 @@ const setAlarm = () => {
 //     console.log(numbers.filter(oddNumberCount));
 
 oddNumberCount(7)
-oddNumberCount(16)
+oddNumberCount()
+
+
+//Disemvoweling Trolls
+// Write a function named trollsBeGone which receives one argument that should be a sentence (a string). The function should return a new string with all the vowels removed from the original string.
+
+const troll = "This website is for losers!";
+const removeVowels = troll.replace(/[aeiou]/gi, '') //using regex. The 'g' needs to be there in order to select all the vowels. if it's missing only the first vowel will be removed. The 'g' is the 'global regex'.
+
+const trollsBeGone = () => {
+//     for (let i=0; i < troll; i++) {
+    console.log(removeVowels);
+    }
+// } 
+trollsBeGone()
 
     
