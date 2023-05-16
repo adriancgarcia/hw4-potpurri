@@ -4,17 +4,15 @@
 // The second argument: vacationing (the boolean true would be passed in as a parameter whenever you are on vacation)
 // The function should only return true if you are employed and not on vacation (because these are the circumstances under which you need to set an alarm, of course!). It should return false otherwise.
 
-    const employed = true;
-    const vacationing = true;
+    // const employed = true;
+    // const vacationing = true;
 
-const setAlarm = () => {
-    if(employed === true){
-        console.log (true);
-    // } else if (employed === vacationing){
-    // console.log()
+const setAlarm = (employed, vacationing) => {
+    if(employed && !vacationing) return true
+    return false 
     }
-};
-    setAlarm(true, true) // => returns false
+
+    console.log(setAlarm(false, false)) // => returns false
     // setAlarm(false, false) // => returns false
     // setAlarm(false, true) // => returns false
     // setAlarm(true, false) // => returns true
@@ -31,27 +29,16 @@ const setAlarm = () => {
     
     // oddNumberCount(16) // => returns 8 (because [1, 3, 5, 7, 9, 11, 13, 15] are the positive odd numbers below 7)
 
-    const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
-
-    const oddNumberCount = (x) => {
-        for (let i = 0; i < numbers.length; i++){
-            if(numbers[i] % 2 !== 0) {
-                console.log(numbers[i]);
-                // console.log(numbers.filter(oddNumberCount([])))
-            }
-        }
-        };
-//         for (let i = 2; num > i; i++) {
-//             if (num % i === 0) {
-//                 return false;
-//             }
-//         }
-//     return num > 1;
-//     } 
-//     console.log(numbers.filter(oddNumberCount));
-
-oddNumberCount(7)
-oddNumberCount()
+function oddNumberCount(number) {
+    let count = 0;
+    for (let i = 0; i < number; i += 1) {
+      if (i % 2 !== 0) {
+        count = count + 1;
+      }
+    }
+    return count;
+  }
+  console.log(oddNumberCount(7));
 
 
 //Disemvoweling Trolls
@@ -96,22 +83,17 @@ const bankTotal  = -400;
 console.log(bankTotal);
 
 //  Write another function called inTheRed that accepts your bank account summary total (number) as an argument. The function should return true if your total is less than 0, and false otherwise.
-const inTheRed = () => {
-
-
-    if(bankTotal < 0) {
-        console.log(true)
-    } else{
-        console.log(false)
-    }
-}
-
-inTheRed(bankTotal)
-
-//
-
-
+// const inTheRed = () => {
+//     if(bankTotal < 0) {
+//         console.log(true)
+//     } else{
+//         console.log(false)
+//     }
+// }
+// inTheRed(bankTotal)
 // assume my bank total is -400
 // inTheRed(bankTotal) // returns true
+
+
 
 
